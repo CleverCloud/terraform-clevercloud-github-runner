@@ -71,9 +71,9 @@ variable "instance_count" {
 }
 
 variable "repository" {
-  description = "Git repository deployed on the app (must contain the runner/ scripts). Defaults to this module's own git checkout"
+  description = "Git repository deployed on the app, it must contain the runner/ scripts"
   type        = string
-  default     = null
+  default     = "https://github.com/CleverCloud/terraform-clevercloud-github-runner.git"
 }
 
 variable "commit" {

@@ -25,7 +25,7 @@ resource "clevercloud_linux" "runner" {
   environment = merge(var.environment, local.runner_environment)
 
   deployment {
-    repository = coalesce(var.repository, "file://${abspath(path.module)}")
+    repository = var.repository
     commit     = var.commit
   }
 
